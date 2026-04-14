@@ -50,8 +50,8 @@ for _index in range(1000):
     
     data.append({"review": review, "label": label})
 df = pd.DataFrame({
-    "review": positive_reviews + negative_reviews,
-    "sentiment": ["positive"] * len(positive_reviews) +["negative"] * len(negative_reviews)
+    "review": positive_reviews + negative_reviews + neutral_reviews,
+    "sentiment": ["positive"] * len(positive_reviews) + ["negative"] * len(negative_reviews) + ["neutral"] * len(neutral_reviews)
     })
 df.to_csv("reviews_dataset.csv", index=False)
 
